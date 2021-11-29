@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.texnoman.foodorder.OrderDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/deliver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_200dp"
+            android:elevation="@dimen/size_0dp"
+            app:cardCornerRadius="@dimen/size_8dp">
+
+            <ImageView
+                android:id="@+id/image_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_image" />
+
+            <ImageView
+                android:id="@+id/image_logo"
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="@dimen/size_50dp"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="@dimen/size_4dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/size_10dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:background="@drawable/back_restaurant_name"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="@dimen/size_5dp"
+                android:scaleY="0.9"
+                android:text="Evos"
+                android:textColor="@color/whiteText"
+                android:textSize="@dimen/text_14sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/size_15dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/size_10dp"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:minHeight="@dimen/size_15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_16dp"
+                        android:layout_height="@dimen/size_16dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/watch_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/size_2dp"
+                        android:text="@string/delivery"
+                        android:textSize="@dimen/text_11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/delivery_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[30:00 - 45:00]"
+                    android:textColor="@color/blackText"
+                    android:textSize="@dimen/text_12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_16dp"
+                        android:layout_height="@dimen/size_16dp"
+                        android:src="@drawable/icon_money" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/min_order_price"
+                        android:textSize="@dimen/text_11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/min_order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_3dp"
+                    android:text="15000 so'm"
+                    android:textColor="@color/blackText"
+                    android:textSize="@dimen/text_12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_16dp"
+                        android:layout_height="@dimen/size_16dp"
+                        android:src="@drawable/icon_money" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/delivery_price"
+                        android:textSize="@dimen/text_11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/delivery_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_3dp"
+                    android:text="6000 so'm"
+                    android:textColor="@color/blackText"
+                    android:textSize="@dimen/text_12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:background="@color/blackText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:background="@drawable/background_category_green"
+            android:padding="@dimen/size_3dp"
+            android:text="@string/order_details"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cancalled_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_30dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:background="@drawable/background_category"
+            android:backgroundTint="@color/colorAccent"
+            android:gravity="center"
+            android:padding="@dimen/size_10dp"
+            android:text="Buyurtma restarant tomonidan \nbekor qilindi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18sp"
+            android:textStyle="italic|bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/checkboxs_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/status_before_created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:layout_marginTop="@dimen/size_2dp"
+                android:clickable="false"
+                android:outlineSpotShadowColor="@color/colorAccent"
+                android:paddingBottom="@dimen/size_0dp"
+                android:shadowColor="@color/colorAccent"
+                android:text="@string/pending"
+                android:textColor="@color/light_grey"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/status_created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:clickable="false"
+                android:text="@string/order_created"
+                android:textColor="@color/light_grey"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/status_received"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:clickable="false"
+                android:text="@string/order_making"
+                android:textColor="@color/light_grey"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/received_by_delivery_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:clickable="false"
+                android:text="@string/received_by_delivery_man"
+                android:textColor="@color/light_grey"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/status_on_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:clickable="false"
+                android:text="@string/order_at_way"
+                android:textColor="@color/light_grey"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/status_delivered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_15dp"
+                android:clickable="false"
+                android:text="@string/status_delivered"
+                android:textColor="@color/light_grey"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:scaleX="-1"
+                android:src="@drawable/delivery_boy2" />
+
+            <TextView
+                android:id="@+id/delivery_price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="eltuv narxi"
+                android:textColor="@color/blackText"
+                android:textSize="@dimen/text_18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/image_map"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:background="@drawable/background_plus_minus_big"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:paddingLeft="@dimen/size_15dp"
+        android:paddingTop="@dimen/size_5dp"
+        android:paddingRight="@dimen/size_15dp"
+        android:paddingBottom="@dimen/size_5dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16sp" />
+
+    <ImageView
+        android:id="@+id/image_map"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_100dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_map"
+        android:visibility="gone" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_180dp"
+        android:layout_below="@+id/deliver">
+        <TextView
+            android:id="@+id/order_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blackText"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/size_15dp"
+            android:layout_marginRight="@dimen/size_15dp" />
+    </ScrollView>
+</RelativeLayout>

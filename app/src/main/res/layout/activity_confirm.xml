@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="info.texnoman.foodorder.SplashActivity">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size_90dp"
+                android:src="@drawable/logo_gif"/>
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="-24dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/size_30dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/size_30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/send_code"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/back_count_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/size_50dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_25sp"
+                        android:text="00:59"/>
+                    <EditText
+                        android:id="@+id/confirm_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_16dp"
+                        android:hint="@string/confirm_code"
+                        android:inputType="number"
+                        android:textSize="16sp"
+                        android:backgroundTint="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textColor="@color/black"/>
+
+
+                    <TextView
+                        android:id="@+id/confirm_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_16dp"
+                        android:background="@drawable/round_accent"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:text="@string/confirm"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/splashMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center"
+                    android:layout_gravity="bottom"
+                    android:text="@string/splash_message"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_12sp"/>
+
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

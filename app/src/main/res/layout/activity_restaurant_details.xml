@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="info.texnoman.foodorder.RestaurantDetailsActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/filter_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/size_50dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:src="@drawable/ic_filter"
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:padding="@dimen/size_0dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200dp">
+
+                <ImageView
+                    android:id="@+id/restaurant_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_250dp"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_15dp"
+                    android:layout_marginTop="@dimen/size_25dp"
+                    android:onClick="onBackPress"
+                    android:src="@drawable/back_button"/>
+
+                <LinearLayout
+                    android:id="@+id/cart_image_linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/size_15dp"
+                    android:layout_marginTop="@dimen/size_15dp"
+                    android:onClick="passCartActivity"
+                    android:padding="@dimen/size_10dp">
+
+                    <ImageView
+                        android:id="@+id/cart_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_cart" />
+
+                    <TextView
+                        android:id="@+id/badge_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-5dp"
+                        android:background="@drawable/background_badge"
+                        android:gravity="center"
+                        android:minEms="2"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="6sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/restaurant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/size_35dp"
+                    android:background="@drawable/background_category"
+                    android:backgroundTint="@color/white"
+                    android:paddingLeft="@dimen/size_10dp"
+                    android:paddingTop="@dimen/size_2dp"
+                    android:paddingRight="@dimen/size_10dp"
+                    android:paddingBottom="@dimen/size_2dp"
+                    android:text=""
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_18sp"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxEms="10"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/min_oredr_layout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="@dimen/size_15dp"
+                        android:background="@drawable/background_category"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/size_10dp"
+                        android:paddingTop="@dimen/size_5dp"
+                        android:paddingRight="@dimen/size_10dp"
+                        android:paddingBottom="@dimen/size_5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_15dp"
+                            android:layout_height="@dimen/size_15dp"
+                            android:src="@drawable/clock" />
+
+                        <TextView
+                            android:id="@+id/working_hours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:scaleY="0.9"
+                            android:text="10:00-22:00"
+                            android:textSize="@dimen/text_10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/min_oredr_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_marginRight="@dimen/size_15dp"
+                        android:layout_marginBottom="@dimen/size_25dp"
+                        android:background="@drawable/background_category"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:padding="@dimen/size_5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_15dp"
+                            android:layout_height="@dimen/size_15dp"
+                            android:src="@drawable/money_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:scaleY="0.9"
+                            android:text="30000 so'm (min. order)"
+                            android:textColor="@color/blackText"
+                            android:textSize="@dimen/text_12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/delivery_time_layout"
+                        android:layout_marginLeft="@dimen/size_15dp"
+                        android:background="@drawable/background_restaurant_details"
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/size_10dp"
+                        android:paddingTop="@dimen/size_5dp"
+                        android:paddingRight="@dimen/size_10dp"
+                        android:paddingBottom="@dimen/size_5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_15dp"
+                            android:layout_height="@dimen/size_15dp"
+                            android:src="@drawable/deliver_boy" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:scaleY="0.9"
+                            android:text="6000 so'm"
+                            android:textColor="@color/blackText"
+                            android:textSize="@dimen/text_12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/delivery_time_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/size_15dp"
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:layout_marginBottom="@dimen/size_25dp"
+                        android:background="@drawable/background_category"
+
+                        android:backgroundTint="@color/white"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/size_10dp"
+                        android:paddingTop="@dimen/size_5dp"
+                        android:paddingRight="@dimen/size_10dp"
+                        android:paddingBottom="@dimen/size_5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_15dp"
+                            android:layout_height="@dimen/size_15dp"
+                            android:scaleX="-1"
+                            android:src="@drawable/delivery_time" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:scaleY="0.9"
+                            android:text="32:00 - 40:00 min"
+                            android:textColor="@color/blackText"
+                            android:textSize="@dimen/text_12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/background_category_hozont"
+                android:backgroundTint="#f5f5f5"
+                android:minHeight="@dimen/size_40dp"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/size_10dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cart_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:background="@drawable/background_cart_button"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/size_10dp"
+            android:paddingLeft="@dimen/size_10dp"
+            android:paddingBottom="@dimen/size_10dp"
+            android:paddingTop="@dimen/size_10dp"
+            android:textSize="@dimen/text_18sp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="passCartActivity">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+            <TextView
+                android:id="@+id/bottom_badge_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:scaleY="0.9"
+                android:text="@string/cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_category"
+    android:layout_width="@dimen/size_100dp"
+    android:layout_height="@dimen/size_100dp"
+    android:layout_marginLeft="@dimen/size_10dp"
+    android:layout_marginTop="@dimen/size_10dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:backgroundTint="@color/yellow">
+
+
+    <ImageView
+        android:id="@+id/image_category"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_100dp"
+        android:src="@drawable/default_image"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/text_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_5dp"
+        android:gravity="center"
+        android:text="Salom Dunyo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_12sp"
+        android:layout_gravity="bottom|center_horizontal"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_5dp"
+        android:gravity="center"
+        android:text=" "
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_12sp"
+        android:background="@color/blackText"
+        android:alpha="0.6"
+        android:layout_gravity="bottom|center_horizontal"/>
+</androidx.cardview.widget.CardView>

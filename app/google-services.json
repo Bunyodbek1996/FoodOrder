@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "86362905573",
+    "firebase_url": "https://ketaylik-1bdac.firebaseio.com",
+    "project_id": "ketaylik-1bdac",
+    "storage_bucket": "ketaylik-1bdac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:86362905573:android:3f4467a8672ed436666d0c",
+        "android_client_info": {
+          "package_name": "info.texnoman.foodorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "86362905573-dgb820okn869kf35dphajv89n9hee23g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "info.texnoman.foodorder",
+            "certificate_hash": "8d93edbc22d43f92fa7b6b7a582747dbfc910978"
+          }
+        },
+        {
+          "client_id": "86362905573-t7h7ob94kf4ka41b6c69r70ol3rdn6io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_oCL30eH3U9Fij_UKWGMGVoXOkEcof90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "86362905573-t7h7ob94kf4ka41b6c69r70ol3rdn6io.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
